@@ -80,12 +80,12 @@ const passwordForgot = errorHandler(async function(req,res,next){
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'tokulhasan24@gmail.com',
-          pass: 'Doutzen2301'
+          user: 'your email',
+          pass: 'your password'
         }
     });
 
-    const resetPasswordUrl = `http://localhost:5000/api/auth/passwordreset?encryptedToken=${token}&vector=${vector}`;
+    const resetPasswordUrl = `http://localhost:<port>/api/auth/passwordreset?encryptedToken=${token}&vector=${vector}`;
 
 
 
@@ -96,7 +96,7 @@ const passwordForgot = errorHandler(async function(req,res,next){
     `
 
     var mailOptions = {
-        from: 'tokulhasan24@gmail.com',
+        from: 'your email',
         to: email,
         subject: 'Reset Password',
         html: emailTemplate
