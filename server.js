@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router()
 const dotenv = require("dotenv")
 const routes = require("./routes/main")
-const {connectDatabase} = require("./helpers/database/connectDatabase")
+const {connectDatabase} = require("./helpers/database/databaseConnection")
 const bodyParser = require("body-parser")
 const {errorHandling} = require("./middlewares/error/errorHandling")
 
